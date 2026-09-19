@@ -1,0 +1,4 @@
+/* The static menu has no floating cart or order form. */
+body.static-site { padding-bottom: 0; }
+.dish-availability { margin: 0; padding: 0 10px 10px; color: var(--color-smoke); font-size: 12px; }
+.dish-text .dish-availability { padding: 8px 0 0; }
