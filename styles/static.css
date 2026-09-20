@@ -2,5 +2,3 @@
 body.static-site { padding-bottom: 0; }
 .dish-availability { margin: 0; padding: 0 10px 10px; color: var(--color-smoke); font-size: 12px; }
 .dish-text .dish-availability { padding: 8px 0 0; }
-/* Match the other dishes' portrait framing for the nearly square lamb photo. */
-.dish-photo--pugovki-lamb img { left: 12.5%; width: 75%; background: #d1a880; }
