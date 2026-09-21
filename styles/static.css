@@ -2,3 +2,12 @@
 body.static-site { padding-bottom: 0; }
 .dish-availability { margin: 0; padding: 0 10px 10px; color: var(--color-smoke); font-size: 12px; }
 .dish-text .dish-availability { padding: 8px 0 0; }
+
+.contact-socials { display: flex; flex-wrap: wrap; gap: 12px; max-width: 100%; }
+.contact-social { display: inline-flex; align-items: center; gap: 12px; min-height: 64px; padding: 12px 16px; border: 1px solid var(--color-corten); border-radius: 14px; color: var(--color-corten); background: #fffaf3; text-decoration: none; }
+.contact-social svg { width: 24px; height: 24px; flex-shrink: 0; }
+.contact-social span { display: grid; gap: 3px; }
+.contact-social strong { font-size: 15px; font-weight: 600; }
+.contact-social small { font-size: 12px; letter-spacing: 0; }
+.contact-social:hover { background: #f1e5d5; }
+.contact-social:focus-visible { outline: 2px solid var(--color-corten); outline-offset: 4px; }
