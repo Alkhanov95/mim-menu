@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Меню кафе-кулинарии МИМ: домашняя и вайнахская кухня, лепёшки, горячее и замороженные изделия.">
@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="./styles/monte-tokens.css">
   <link rel="stylesheet" href="./styles/site.css">
   <script src="./scripts/menu.js?v=20260921-motion" defer></script>
-  <link rel="stylesheet" href="./styles/static.css?v=20260921-3">
+  <link rel="stylesheet" href="./styles/static.css?v=20260921-cart">
+  <script type="module" src="./scripts/cart.js?v=20260921-cart"></script>
 </head>
 <body class="static-site">
   <a class="skip-link" href="#menu">Перейти к меню</a>
@@ -46,70 +47,70 @@
           <div class="section-heading"><div class="section-title"><span class="section-number">01</span><h3 id="heading-vainakh">Вайнахская кухня</h3></div><span class="section-count">10 поз.</span></div>
           <p class="note">Пшеничные или кукурузные галушки — на ваш выбор, без доплаты.</p>
           
-          <ul class="dish-grid"><li class="dish dish-card" data-name="Галушки с отварной говядиной">
+          <ul class="dish-grid"><li class="dish dish-card" data-product-id="dish-34a51c4acfe6" data-name="Галушки с отварной говядиной">
     <div class="dish-photo"><img src="./images/cards/galushki-beef-square.webp" alt="Галушки с отварной говядиной" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки с отварной говядиной</h4>
       <div class="dish-bottom"><span class="price">1 250 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Галушки с бараниной">
+  </li><li class="dish dish-card" data-product-id="dish-0e0834b756a7" data-name="Галушки с бараниной">
     <div class="dish-photo"><img src="./images/cards/galushki-lamb-square.webp" alt="Галушки с бараниной" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки с бараниной</h4>
       <div class="dish-bottom"><span class="price">1 260 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Галушки с сушёным мясом">
+  </li><li class="dish dish-card" data-product-id="dish-bef99a16de12" data-name="Галушки с сушёным мясом">
     <div class="dish-photo"><img src="./images/cards/galushki-dried-meat-square.webp" alt="Галушки с сушёным мясом" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки с сушёным мясом</h4>
       <div class="dish-bottom"><span class="price">1 260 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Галушки с сушёной колбасой">
+  </li><li class="dish dish-card" data-product-id="dish-92ec76fec62b" data-name="Галушки с сушёной колбасой">
     <div class="dish-photo"><img src="./images/cards/galushki-dried-sausage-square.webp" alt="Галушки с сушёной колбасой" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки с сушёной колбасой</h4>
       <div class="dish-bottom"><span class="price">1 220 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Галушки с курицей">
+  </li><li class="dish dish-card" data-product-id="dish-a5034636a942" data-name="Галушки с курицей">
     <div class="dish-photo"><img src="./images/cards/galushki-chicken-square.webp" alt="Галушки с курицей" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки с курицей</h4>
       <div class="dish-bottom"><span class="price">1 150 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Галушки «Пуговки» с отварной говядиной">
+  </li><li class="dish dish-card" data-product-id="dish-f3ec25a1c882" data-name="Галушки «Пуговки» с отварной говядиной">
     <div class="dish-photo"><img src="./images/cards/galushki-pugovki-beef-square.webp" alt="Галушки «Пуговки» с отварной говядиной" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки «Пуговки» с отварной говядиной</h4>
       <div class="dish-bottom"><span class="price">1 250 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Галушки «Пуговки» с бараниной">
+  </li><li class="dish dish-card" data-product-id="dish-fa8b8c304a9e" data-name="Галушки «Пуговки» с бараниной">
     <div class="dish-photo"><img src="./images/cards/galushki-pugovki-lamb-square.webp" alt="Галушки «Пуговки» с бараниной" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки «Пуговки» с бараниной</h4>
       <div class="dish-bottom"><span class="price">1 260 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Галушки «Пуговки» с сушёным мясом">
+  </li><li class="dish dish-card" data-product-id="dish-9197a936167e" data-name="Галушки «Пуговки» с сушёным мясом">
     <div class="dish-photo"><img src="./images/cards/galushki-pugovki-dried-meat-square.webp" alt="Галушки «Пуговки» с сушёным мясом" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки «Пуговки» с сушёным мясом</h4>
       <div class="dish-bottom"><span class="price">1 260 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Галушки «Пуговки» с сушёной колбасой">
+  </li><li class="dish dish-card" data-product-id="dish-4364d14f5672" data-name="Галушки «Пуговки» с сушёной колбасой">
     <div class="dish-photo"><img src="./images/cards/galushki-pugovki-dried-sausage-square.webp" alt="Галушки «Пуговки» с сушёной колбасой" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки «Пуговки» с сушёной колбасой</h4>
       <div class="dish-bottom"><span class="price">1 220 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Галушки «Пуговки» с курицей">
+  </li><li class="dish dish-card" data-product-id="dish-62c0b9d94f7a" data-name="Галушки «Пуговки» с курицей">
     <div class="dish-photo"><img src="./images/cards/galushki-pugovki-chicken-square.webp" alt="Галушки «Пуговки» с курицей" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки «Пуговки» с курицей</h4>
@@ -123,35 +124,35 @@
           <div class="section-heading"><div class="section-title"><span class="section-number">02</span><h3 id="heading-flatbreads">Традиционные лепёшки</h3></div><span class="section-count">5 поз.</span></div>
           
           
-          <ul class="dish-grid"><li class="dish dish-card" data-name="Чепалг с творогом">
+          <ul class="dish-grid"><li class="dish dish-card" data-product-id="dish-3e8cfcbd40a8" data-name="Чепалг с творогом">
     <div class="dish-photo"><img src="./images/cards/chepalg-cottage-cheese-square.webp" alt="Чепалг с творогом" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Чепалг с творогом</h4>
       <div class="dish-bottom"><span class="price">470 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Чепалг с картофелем">
+  </li><li class="dish dish-card" data-product-id="dish-314f48f87b0e" data-name="Чепалг с картофелем">
     <div class="dish-photo"><img src="./images/cards/chepalg-potato-square.webp" alt="Чепалг с картофелем" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Чепалг с картофелем</h4>
       <div class="dish-bottom"><span class="price">450 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Хингалш с тыквой">
+  </li><li class="dish dish-card" data-product-id="dish-fd6182a0b11a" data-name="Хингалш с тыквой">
     <div class="dish-photo"><img src="./images/cards/hingalsh-square.webp" alt="Хингалш с тыквой" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Хингалш с тыквой</h4>
       <div class="dish-bottom"><span class="price">470 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Сискал то берам">
+  </li><li class="dish dish-card" data-product-id="dish-15879018869a" data-name="Сискал то берам">
     <div class="dish-photo"><img src="./images/cards/siskal-beram-square.webp" alt="Сискал то берам" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Сискал то берам</h4>
       <div class="dish-bottom"><span class="price">650 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Хьокхам">
+  </li><li class="dish dish-card" data-product-id="dish-fb31312e3752" data-name="Хьокхам">
     <div class="dish-photo"><img src="./images/cards/hyokham-square.webp" alt="Хьокхам" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Хьокхам</h4>
@@ -165,35 +166,35 @@
           <div class="section-heading"><div class="section-title"><span class="section-number">03</span><h3 id="heading-hot">Горячее</h3></div><span class="section-count">5 поз.</span></div>
           
           <p class="note">Котлеты подаём без гарнира. Выберите к ним гарнир отдельно.</p>
-          <ul class="dish-grid"><li class="dish dish-card" data-name="Куриные котлеты без гарнира">
+          <ul class="dish-grid"><li class="dish dish-card" data-product-id="dish-ed413b3bc0d2" data-name="Куриные котлеты без гарнира">
     <div class="dish-photo"><img src="./images/cards/chicken-cutlets-square.webp" alt="Куриные котлеты без гарнира" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Куриные котлеты без гарнира</h4>
       <div class="dish-bottom"><span class="price">600 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Говяжьи котлеты без гарнира">
+  </li><li class="dish dish-card" data-product-id="dish-127afbf4d052" data-name="Говяжьи котлеты без гарнира">
     <div class="dish-photo"><img src="./images/cards/beef-cutlets-square.webp" alt="Говяжьи котлеты без гарнира" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Говяжьи котлеты без гарнира</h4>
       <div class="dish-bottom"><span class="price">680 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Домашние пельмени с говядиной">
+  </li><li class="dish dish-card" data-product-id="dish-d72c13d11647" data-name="Домашние пельмени с говядиной">
     <div class="dish-photo"><img src="./images/cards/pelmeni-beef-square.webp" alt="Домашние пельмени с говядиной" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Домашние пельмени с говядиной</h4>
       <div class="dish-bottom"><span class="price">650 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Манты с говядиной">
+  </li><li class="dish dish-card" data-product-id="dish-93d6bc0fcbd4" data-name="Манты с говядиной">
     <div class="dish-photo"><img src="./images/cards/manty-square.webp" alt="Манты с говядиной" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Манты с говядиной</h4>
       <div class="dish-bottom"><span class="price">750 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Бефстроганов с картофельным пюре">
+  </li><li class="dish dish-card" data-product-id="dish-d6036fb56cd4" data-name="Бефстроганов с картофельным пюре">
     <div class="dish-photo"><img src="./images/cards/stroganoff-square.webp" alt="Бефстроганов с картофельным пюре" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Бефстроганов с картофельным пюре</h4>
@@ -207,21 +208,21 @@
           <div class="section-heading"><div class="section-title"><span class="section-number">04</span><h3 id="heading-pasta">Паста</h3></div><span class="section-count">3 поз.</span></div>
           
           
-          <ul class="dish-grid"><li class="dish dish-card" data-name="Фетучини с лососем">
+          <ul class="dish-grid"><li class="dish dish-card" data-product-id="dish-43b1134921f4" data-name="Фетучини с лососем">
     <div class="dish-photo"><img src="./images/cards/fettuccine-salmon-square.webp" alt="Фетучини с лососем" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Фетучини с лососем</h4>
       <div class="dish-bottom"><span class="price">850 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Спагетти с курицей и грибами">
+  </li><li class="dish dish-card" data-product-id="dish-cc85febb2df7" data-name="Спагетти с курицей и грибами">
     <div class="dish-photo"><img src="./images/cards/spaghetti-chicken-mushrooms-square.webp" alt="Спагетти с курицей и грибами" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Спагетти с курицей и грибами</h4>
       <div class="dish-bottom"><span class="price">650 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Фарфалле с томатами черри и пармезаном">
+  </li><li class="dish dish-card" data-product-id="dish-60804754a031" data-name="Фарфалле с томатами черри и пармезаном">
     <div class="dish-photo"><img src="./images/cards/farfalle-cherry-tomatoes-parmesan-square.webp" alt="Фарфалле с томатами черри и пармезаном" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Фарфалле с томатами черри и пармезаном</h4>
@@ -236,14 +237,14 @@
           
           
           
-          <ul class="dish-list"><li class="dish dish-text" data-name="Шаурма классическая">
+          <ul class="dish-list"><li class="dish dish-text" data-product-id="dish-a07946619e1f" data-name="Шаурма классическая">
     
     <div class="dish-details">
       <h4 class="dish-name">Шаурма классическая</h4>
       <div class="dish-bottom"><span class="price">430 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-text" data-name="Шаурма сырная">
+  </li><li class="dish dish-text" data-product-id="dish-7b46b1fc6249" data-name="Шаурма сырная">
     
     <div class="dish-details">
       <h4 class="dish-name">Шаурма сырная</h4>
@@ -256,49 +257,49 @@
           <div class="section-heading"><div class="section-title"><span class="section-number">06</span><h3 id="heading-soups">Супы</h3></div><span class="section-count">7 поз.</span></div>
           
           
-          <ul class="dish-grid"><li class="dish dish-card" data-name="Домашний куриный суп">
+          <ul class="dish-grid"><li class="dish dish-card" data-product-id="dish-a6d872ac04dc" data-name="Домашний куриный суп">
     <div class="dish-photo"><img src="./images/cards/chicken-soup-square.webp" alt="Домашний куриный суп" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Домашний куриный суп</h4>
       <div class="dish-bottom"><span class="price">520 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Фасолевый суп с сушёным мясом">
+  </li><li class="dish dish-card" data-product-id="dish-8b99b2936c50" data-name="Фасолевый суп с сушёным мясом">
     <div class="dish-photo"><img src="./images/cards/bean-soup-dried-meat-square.webp" alt="Фасолевый суп с сушёным мясом" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Фасолевый суп с сушёным мясом</h4>
       <div class="dish-bottom"><span class="price">590 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Чечевичный крем-суп">
+  </li><li class="dish dish-card" data-product-id="dish-e65b3392f05a" data-name="Чечевичный крем-суп">
     <div class="dish-photo"><img src="./images/cards/lentil-square.webp" alt="Чечевичный крем-суп" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Чечевичный крем-суп</h4>
       <div class="dish-bottom"><span class="price">520 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Крем-суп из тыквы">
+  </li><li class="dish dish-card" data-product-id="dish-55af83602a2c" data-name="Крем-суп из тыквы">
     <div class="dish-photo"><img src="./images/cards/pumpkin-cream-soup-square.webp" alt="Крем-суп из тыквы" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Крем-суп из тыквы</h4>
       <div class="dish-bottom"><span class="price">630 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Борщ классический">
+  </li><li class="dish dish-card" data-product-id="dish-ca13ed576265" data-name="Борщ классический">
     <div class="dish-photo"><img src="./images/cards/borscht-square.webp" alt="Борщ классический" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Борщ классический</h4>
       <div class="dish-bottom"><span class="price">550 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Чурпа из говядины">
+  </li><li class="dish dish-card" data-product-id="dish-f080c18abd8d" data-name="Чурпа из говядины">
     <div class="dish-photo"><img src="./images/cards/beef-churpa-square.webp" alt="Чурпа из говядины" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Чурпа из говядины</h4>
       <div class="dish-bottom"><span class="price">650 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Чурпа из баранины">
+  </li><li class="dish dish-card" data-product-id="dish-168be91326ea" data-name="Чурпа из баранины">
     <div class="dish-photo"><img src="./images/cards/lamb-churpa-square.webp" alt="Чурпа из баранины" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Чурпа из баранины</h4>
@@ -312,21 +313,21 @@
           <div class="section-heading"><div class="section-title"><span class="section-number">07</span><h3 id="heading-breakfast">Завтраки</h3></div><span class="section-count">4 поз.</span></div>
           
           
-          <ul class="dish-grid"><li class="dish dish-card" data-name="Блины с топпингом">
+          <ul class="dish-grid"><li class="dish dish-card" data-product-id="dish-467db19aa78e" data-name="Блины с топпингом">
     <div class="dish-photo"><img src="./images/cards/blinchiki-square.webp" alt="Блины с топпингом" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Блины с топпингом</h4>
       <div class="dish-bottom"><span class="price">420 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Пышные оладьи с топпингом">
+  </li><li class="dish dish-card" data-product-id="dish-97c5fc430cf0" data-name="Пышные оладьи с топпингом">
     <div class="dish-photo"><img src="./images/cards/oladyi-square.webp" alt="Пышные оладьи с топпингом" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Пышные оладьи с топпингом</h4>
       <div class="dish-bottom"><span class="price">430 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Воздушный омлет с томатами">
+  </li><li class="dish dish-card" data-product-id="dish-a348e0f790c3" data-name="Воздушный омлет с томатами">
     <div class="dish-photo"><img src="./images/cards/omelet-tomatoes-square.webp" alt="Воздушный омлет с томатами" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Воздушный омлет с томатами</h4>
@@ -334,7 +335,7 @@
     </div>
 
   </li></ul>
-          <ul class="dish-list"><li class="dish dish-text" data-name="Классическая яичница-глазунья">
+          <ul class="dish-list"><li class="dish dish-text" data-product-id="dish-66aa9e260d5b" data-name="Классическая яичница-глазунья">
     
     <div class="dish-details">
       <h4 class="dish-name">Классическая яичница-глазунья</h4>
@@ -347,35 +348,35 @@
           <div class="section-heading"><div class="section-title"><span class="section-number">08</span><h3 id="heading-salads">Салаты</h3></div><span class="section-count">5 поз.</span></div>
           
           
-          <ul class="dish-grid"><li class="dish dish-card" data-name="Цезарь с куриным филе">
+          <ul class="dish-grid"><li class="dish dish-card" data-product-id="dish-7061eb61b978" data-name="Цезарь с куриным филе">
     <div class="dish-photo"><img src="./images/cards/caesar-chicken-square.webp?v=20260921" alt="Цезарь с куриным филе" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Цезарь с куриным филе</h4>
       <div class="dish-bottom"><span class="price">750 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Цезарь с креветками">
+  </li><li class="dish dish-card" data-product-id="dish-813cea358e4c" data-name="Цезарь с креветками">
     <div class="dish-photo"><img src="./images/cards/caesar-shrimp-square.webp?v=20260921" alt="Цезарь с креветками" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Цезарь с креветками</h4>
       <div class="dish-bottom"><span class="price">800 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Греческий салат">
+  </li><li class="dish dish-card" data-product-id="dish-d8d664c58ea8" data-name="Греческий салат">
     <div class="dish-photo"><img src="./images/cards/greek-salad-square.webp?v=20260921" alt="Греческий салат" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Греческий салат</h4>
       <div class="dish-bottom"><span class="price">750 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Салат с хрустящими баклажанами">
+  </li><li class="dish dish-card" data-product-id="dish-99df7bf65c78" data-name="Салат с хрустящими баклажанами">
     <div class="dish-photo"><img src="./images/cards/crispy-eggplant-salad-square.webp?v=20260921" alt="Салат с хрустящими баклажанами" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Салат с хрустящими баклажанами</h4>
       <div class="dish-bottom"><span class="price">700 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Деревенский салат">
+  </li><li class="dish dish-card" data-product-id="dish-649bec5ab475" data-name="Деревенский салат">
     <div class="dish-photo"><img src="./images/cards/country-salad-square.webp?v=20260921" alt="Деревенский салат" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Деревенский салат</h4>
@@ -390,42 +391,42 @@
           
           
           
-          <ul class="dish-list"><li class="dish dish-text" data-name="Рис басмати">
+          <ul class="dish-list"><li class="dish dish-text" data-product-id="dish-eb543475f1ec" data-name="Рис басмати">
     
     <div class="dish-details">
       <h4 class="dish-name">Рис басмати</h4>
       <div class="dish-bottom"><span class="price">250 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-text" data-name="Гречка">
+  </li><li class="dish dish-text" data-product-id="dish-27d22a0fe36e" data-name="Гречка">
     
     <div class="dish-details">
       <h4 class="dish-name">Гречка</h4>
       <div class="dish-bottom"><span class="price">250 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-text" data-name="Картофельное пюре">
+  </li><li class="dish dish-text" data-product-id="dish-a7cfed06e7c7" data-name="Картофельное пюре">
     
     <div class="dish-details">
       <h4 class="dish-name">Картофельное пюре</h4>
       <div class="dish-bottom"><span class="price">260 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-text" data-name="Картофель фри">
+  </li><li class="dish dish-text" data-product-id="dish-3cc306cf2c98" data-name="Картофель фри">
     
     <div class="dish-details">
       <h4 class="dish-name">Картофель фри</h4>
       <div class="dish-bottom"><span class="price">280 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-text" data-name="Картофель по-деревенски">
+  </li><li class="dish dish-text" data-product-id="dish-945f1e300244" data-name="Картофель по-деревенски">
     
     <div class="dish-details">
       <h4 class="dish-name">Картофель по-деревенски</h4>
       <div class="dish-bottom"><span class="price">280 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-text" data-name="Спагетти">
+  </li><li class="dish dish-text" data-product-id="dish-dc32e13dbe3b" data-name="Спагетти">
     
     <div class="dish-details">
       <h4 class="dish-name">Спагетти</h4>
@@ -438,7 +439,7 @@
           <div class="section-heading"><div class="section-title"><span class="section-number">10</span><h3 id="heading-desserts">Десерты</h3></div><span class="section-count">1 поз.</span></div>
           
           
-          <ul class="dish-grid"><li class="dish dish-card" data-name="Традиционные пышки с карамельной сгущёнкой">
+          <ul class="dish-grid"><li class="dish dish-card" data-product-id="dish-91db62a8010d" data-name="Традиционные пышки с карамельной сгущёнкой">
     <div class="dish-photo"><img src="./images/cards/traditional-pyshki-square.webp" alt="Традиционные пышки с карамельной сгущёнкой" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Традиционные пышки с карамельной сгущёнкой</h4>
@@ -452,91 +453,91 @@
           <div class="section-heading"><div class="section-title"><span class="section-number">11</span><h3 id="heading-drinks">Напитки</h3></div><span class="section-count">18 поз.</span></div>
           
           
-          <ul class="dish-grid"><li class="dish dish-card" data-name="Coca-Cola">
+          <ul class="dish-grid"><li class="dish dish-card" data-product-id="dish-14438b2359a1" data-name="Coca-Cola">
     <div class="dish-photo"><img src="./images/cards/coca-cola-033-square.webp" alt="Coca-Cola" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Coca-Cola</h4>
       <div class="dish-bottom"><span class="portion">0,33 л</span><span class="price">280 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Fanta">
+  </li><li class="dish dish-card" data-product-id="dish-75de0246d0eb" data-name="Fanta">
     <div class="dish-photo"><img src="./images/cards/fanta-033-square.webp" alt="Fanta" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Fanta</h4>
       <div class="dish-bottom"><span class="portion">0,33 л</span><span class="price">280 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Яблочный сок">
+  </li><li class="dish dish-card" data-product-id="dish-29347c67ff38" data-name="Яблочный сок">
     <div class="dish-photo"><img src="./images/cards/apple-juice-1l-square.webp" alt="Яблочный сок" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Яблочный сок</h4>
       <div class="dish-bottom"><span class="portion">1 л</span><span class="price">430 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Мультивитамин">
+  </li><li class="dish dish-card" data-product-id="dish-ba8bbada828b" data-name="Мультивитамин">
     <div class="dish-photo"><img src="./images/cards/multivitamin-juice-1l-square.webp" alt="Мультивитамин" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Мультивитамин</h4>
       <div class="dish-bottom"><span class="portion">1 л</span><span class="price">430 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Вишнёвый сок">
+  </li><li class="dish dish-card" data-product-id="dish-81e5659beb31" data-name="Вишнёвый сок">
     <div class="dish-photo"><img src="./images/cards/cherry-juice-1l-square.webp" alt="Вишнёвый сок" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Вишнёвый сок</h4>
       <div class="dish-bottom"><span class="portion">1 л</span><span class="price">430 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Ананасовый сок">
+  </li><li class="dish dish-card" data-product-id="dish-566f681c2c1a" data-name="Ананасовый сок">
     <div class="dish-photo"><img src="./images/cards/pineapple-juice-1l-square.webp" alt="Ананасовый сок" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Ананасовый сок</h4>
       <div class="dish-bottom"><span class="portion">1 л</span><span class="price">450 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Яблочный сок Rich">
+  </li><li class="dish dish-card" data-product-id="dish-4fad15977a61" data-name="Яблочный сок Rich">
     <div class="dish-photo"><img src="./images/cards/rich-apple-juice-02-square.webp" alt="Яблочный сок Rich" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Яблочный сок Rich</h4>
       <div class="dish-bottom"><span class="portion">0,2 л</span><span class="price">190 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Апельсиновый сок Rich">
+  </li><li class="dish dish-card" data-product-id="dish-5c6611e37d44" data-name="Апельсиновый сок Rich">
     <div class="dish-photo"><img src="./images/cards/rich-orange-juice-02-square.webp" alt="Апельсиновый сок Rich" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Апельсиновый сок Rich</h4>
       <div class="dish-bottom"><span class="portion">0,2 л</span><span class="price">200 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Вишнёвый сок Rich">
+  </li><li class="dish dish-card" data-product-id="dish-1c3160905eb7" data-name="Вишнёвый сок Rich">
     <div class="dish-photo"><img src="./images/cards/rich-cherry-juice-02-square.webp" alt="Вишнёвый сок Rich" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Вишнёвый сок Rich</h4>
       <div class="dish-bottom"><span class="portion">0,2 л</span><span class="price">190 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Томатный сок Rich">
+  </li><li class="dish dish-card" data-product-id="dish-7e5672917171" data-name="Томатный сок Rich">
     <div class="dish-photo"><img src="./images/cards/rich-tomato-juice-02-square.webp" alt="Томатный сок Rich" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Томатный сок Rich</h4>
       <div class="dish-bottom"><span class="portion">0,2 л</span><span class="price">190 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Чёрный чай">
+  </li><li class="dish dish-card" data-product-id="dish-3475a2a879c4" data-name="Чёрный чай">
     <div class="dish-photo"><img src="./images/cards/black-tea-900-square.webp" alt="Чёрный чай" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Чёрный чай</h4>
       <div class="dish-bottom"><span class="portion">900 мл</span><span class="price">550 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Зелёный чай">
+  </li><li class="dish dish-card" data-product-id="dish-7cc78f44c2d3" data-name="Зелёный чай">
     <div class="dish-photo"><img src="./images/cards/green-tea-900-square.webp" alt="Зелёный чай" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Зелёный чай</h4>
       <div class="dish-bottom"><span class="portion">900 мл</span><span class="price">550 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Вода «Байкал»">
+  </li><li class="dish dish-card" data-product-id="dish-fdf820ebf8f9" data-name="Вода «Байкал»">
     <div class="dish-photo"><img src="./images/cards/baikal-water-033-square.webp" alt="Вода «Байкал»" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Вода «Байкал»</h4>
@@ -544,35 +545,35 @@
     </div>
 
   </li></ul>
-          <ul class="dish-list"><li class="dish dish-text" data-name="Молочный улун">
+          <ul class="dish-list"><li class="dish dish-text" data-product-id="dish-093222932bfa" data-name="Молочный улун">
     
     <div class="dish-details">
       <h4 class="dish-name">Молочный улун</h4>
       <div class="dish-bottom"><span class="portion">900 мл</span><span class="price">580 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-text" data-name="Чай с чабрецом">
+  </li><li class="dish dish-text" data-product-id="dish-5fe227045f83" data-name="Чай с чабрецом">
     
     <div class="dish-details">
       <h4 class="dish-name">Чай с чабрецом</h4>
       <div class="dish-bottom"><span class="portion">900 мл</span><span class="price">580 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-text" data-name="Чай с бергамотом">
+  </li><li class="dish dish-text" data-product-id="dish-64752b274fb7" data-name="Чай с бергамотом">
     
     <div class="dish-details">
       <h4 class="dish-name">Чай с бергамотом</h4>
       <div class="dish-bottom"><span class="portion">900 мл</span><span class="price">580 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-text" data-name="Авторский чай">
+  </li><li class="dish dish-text" data-product-id="dish-f8d2fc029830" data-name="Авторский чай">
     
     <div class="dish-details">
       <h4 class="dish-name">Авторский чай</h4>
       <div class="dish-bottom"><span class="portion">900 мл</span><span class="price">700 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-text" data-name="Вода «Байкал»">
+  </li><li class="dish dish-text" data-product-id="dish-e2273f0ec3cf" data-name="Вода «Байкал»">
     
     <div class="dish-details">
       <h4 class="dish-name">Вода «Байкал»</h4>
@@ -585,42 +586,42 @@
           <div class="section-heading"><div class="section-title"><span class="section-number">12</span><h3 id="heading-frozen-dough">Замороженные изделия из теста</h3></div><span class="section-count">6 поз.</span></div>
           
           
-          <ul class="dish-grid"><li class="dish dish-card" data-name="Пельмени с говядиной">
+          <ul class="dish-grid"><li class="dish dish-card" data-product-id="dish-ddcd09dc9eea" data-name="Пельмени с говядиной">
     <div class="dish-photo"><img src="./images/cards/f-pelmeni-square.webp" alt="Пельмени с говядиной" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Пельмени с говядиной</h4>
       <div class="dish-bottom"><span class="portion">1 кг</span><span class="price">1 300 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Вареники с картофелем">
+  </li><li class="dish dish-card" data-product-id="dish-41e1f9fc9d40" data-name="Вареники с картофелем">
     <div class="dish-photo"><img src="./images/cards/f-vareniki-potato-square.webp" alt="Вареники с картофелем" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Вареники с картофелем</h4>
       <div class="dish-bottom"><span class="portion">1 кг</span><span class="price">900 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Вареники с творогом">
+  </li><li class="dish dish-card" data-product-id="dish-1d2b59b8aa05" data-name="Вареники с творогом">
     <div class="dish-photo"><img src="./images/cards/f-varenniki-square.webp" alt="Вареники с творогом" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Вареники с творогом</h4>
       <div class="dish-bottom"><span class="portion">1 кг</span><span class="price">1 200 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Манты с говядиной">
+  </li><li class="dish dish-card" data-product-id="dish-f3c3952481fa" data-name="Манты с говядиной">
     <div class="dish-photo"><img src="./images/cards/f-manty-square.webp" alt="Манты с говядиной" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Манты с говядиной</h4>
       <div class="dish-bottom"><span class="portion">1 кг</span><span class="price">1 500 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Галушки пшеничные">
+  </li><li class="dish dish-card" data-product-id="dish-707eb79f6227" data-name="Галушки пшеничные">
     <div class="dish-photo"><img src="./images/cards/f-galushki-wheat-square.webp" alt="Галушки пшеничные" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки пшеничные</h4>
       <div class="dish-bottom"><span class="portion">1 кг</span><span class="price">800 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Галушки кукурузные">
+  </li><li class="dish dish-card" data-product-id="dish-ca665c761d1f" data-name="Галушки кукурузные">
     <div class="dish-photo"><img src="./images/cards/f-galushki-corn-square.webp" alt="Галушки кукурузные" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Галушки кукурузные</h4>
@@ -634,21 +635,21 @@
           <div class="section-heading"><div class="section-title"><span class="section-number">13</span><h3 id="heading-frozen-meat">Замороженные мясные полуфабрикаты</h3></div><span class="section-count">3 поз.</span></div>
           
           
-          <ul class="dish-grid"><li class="dish dish-card" data-name="Куриные котлеты">
+          <ul class="dish-grid"><li class="dish dish-card" data-product-id="dish-a96b27b591ff" data-name="Куриные котлеты">
     <div class="dish-photo"><img src="./images/cards/f-cutlets-square.webp" alt="Куриные котлеты" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Куриные котлеты</h4>
       <div class="dish-bottom"><span class="portion">10 шт.</span><span class="price">1 300 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Говяжьи котлеты">
+  </li><li class="dish dish-card" data-product-id="dish-7961fa599773" data-name="Говяжьи котлеты">
     <div class="dish-photo"><img src="./images/cards/f-beef-cutlets-square.webp" alt="Говяжьи котлеты" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Говяжьи котлеты</h4>
       <div class="dish-bottom"><span class="portion">10 шт.</span><span class="price">1 450 ₽</span></div>
     </div>
 
-  </li><li class="dish dish-card" data-name="Голубцы с говядиной">
+  </li><li class="dish dish-card" data-product-id="dish-18d784d5c0aa" data-name="Голубцы с говядиной">
     <div class="dish-photo"><img src="./images/cards/f-golubtsy-square.webp" alt="Голубцы с говядиной" width="1254" height="1254" loading="lazy" decoding="async"></div>
     <div class="dish-details">
       <h4 class="dish-name">Голубцы с говядиной</h4>

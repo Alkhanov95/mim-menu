@@ -41,3 +41,15 @@ body.static-site { padding-bottom: 0; }
   .header { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; }
   .header-nav { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start; overflow-x: auto; gap: 24px; padding-block: 12px; scrollbar-width: thin; }
 }
+
+/* Checkout is enabled only after the order endpoint is connected. */
+body.static-site.has-cart { padding-bottom: 88px; }
+.dish-variant { display: grid; gap: 6px; margin: 4px 2px 8px; font-size: 12px; color: #624b3d; }
+.dish-variant select { width: 100%; min-height: 44px; padding: 8px 10px; border: 1px solid #ddcbb8; border-radius: 10px; background: #fffaf3; color: #55372a; font: inherit; font-size: 14px; }
+#order-comment { display: block; width: 100%; padding: 12px; border: 1px solid #b8a18b; border-radius: 12px; background: #fffbf5; font: inherit; font-size: 16px; resize: vertical; }
+.cart-items .remove-item { min-height: 44px; }
+#order-fields:disabled { opacity: .7; }
+@media (prefers-reduced-motion: no-preference) {
+  .add-dish, .quantity button, .order-submit { transition: background-color .2s ease, transform .18s ease; }
+  .add-dish:active, .quantity button:active, .order-submit:active { transform: scale(.97); }
+}
