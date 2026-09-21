@@ -5,6 +5,31 @@ const status = document.querySelector('#search-status');
 const empty = document.querySelector('.empty-state');
 const normalize = value => value.toLocaleLowerCase('ru-RU').replaceAll('ё', 'е').trim();
 let selected = 'all';
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const menuContent = document.querySelector('.sections');
+const activeAnimations = new Map();
+
+function reveal(element, distance = 12, duration = 420) {
+  if (reducedMotion.matches || !element.animate) return;
+  activeAnimations.get(element)?.cancel();
+  const animation = element.animate([
+    { opacity: 0, transform: `translateY(${distance}px)` },
+    { opacity: 1, transform: 'translateY(0)' },
+  ], { duration, easing: 'cubic-bezier(.2,.65,.3,1)' });
+  activeAnimations.set(element, animation);
+  const cleanUp = () => {
+    if (activeAnimations.get(element) === animation) activeAnimations.delete(element);
+  };
+  animation.onfinish = cleanUp;
+  animation.oncancel = cleanUp;
+}
+
+reducedMotion.addEventListener('change', () => {
+  if (reducedMotion.matches) {
+    for (const animation of activeAnimations.values()) animation.cancel();
+    activeAnimations.clear();
+  }
+});
 
 function updateMenu() {
   const query = normalize(search.value);
@@ -33,9 +58,10 @@ function updateMenu() {
   status.textContent = query ? `Найдено блюд: ${count}` : '';
 }
 
-function chooseCategory(category) {
+function chooseCategory(category, animate = true) {
   selected = category === 'frozen' || links.some(link => link.dataset.category === category) ? category : 'all';
   updateMenu();
+  if (animate) reveal(menuContent, 6, 240);
 }
 
 for (const link of links) {
@@ -71,4 +97,18 @@ window.addEventListener('hashchange', () => {
   }
 });
 document.querySelector('.search').hidden = false;
-chooseCategory(location.hash.slice(1));
+chooseCategory(location.hash.slice(1), false);
+
+// Content stays visible if motion is disabled or observation is unavailable.
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      observer.unobserve(entry.target);
+      reveal(entry.target);
+    }
+  }, { threshold: 0.08 });
+  for (const element of document.querySelectorAll('.hero-copy, .hero-visual, .interior-section > *, .menu-heading, .section-heading, .dish-card, .visit-grid > section, footer')) {
+    observer.observe(element);
+  }
+}
